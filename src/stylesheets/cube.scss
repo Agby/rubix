@@ -1,0 +1,78 @@
+@import './variables.scss';
+
+.cube-box {
+	display: flex;
+	justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 800px;
+	perspective: 5000px;
+	transform-style: preserve-3d;
+	perspective-origin: top center;
+}
+
+.cube-contain {
+	display: flex;
+	justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 400px;
+  perspective: 0px;
+  transform-style: preserve-3d;
+}
+
+
+.cube {
+  position: absolute;
+  height: 100px;
+	width: 100px;
+	transform-style: preserve-3d;
+}
+
+.cube figure {
+	margin: 0;
+	width: 96px;
+	height: 96px;
+	display: block;
+	position: absolute;
+	border: 2px solid black;
+	text-align: center;
+}
+
+.cube .back {
+	transform: translateZ(-50px);
+	background:	$cube-back-color;
+}
+.cube .right {
+	transform: rotateY(-270deg) translateX(50px);
+	transform-origin: top right;
+	background:	$cube-right-color;
+}
+.cube .left {
+	transform: rotateY(270deg) translateX(-50px);
+	transform-origin: center left;
+	background:	$cube-left-color;
+}
+.cube .top {
+	transform: rotateX(-90deg) translateY(-50px);
+	transform-origin: top center;
+	background:	$cube-top-color;
+}
+.cube .bottom {
+	transform: rotateX(90deg) translateY(50px);
+	transform-origin: bottom center;
+	background:	$cube-bottom-color;
+}
+.cube .front {
+	transform: translateZ(50px);
+	background:	$cube-front-color;
+}
+
+@keyframes spin {
+	from { transform: rotateY(0) rotateX(0); }
+	to { transform: rotateY(360deg) rotateX(360deg); }
+}
+
+.cube-box {
+	 animation: spin 60s infinite linear;
+}

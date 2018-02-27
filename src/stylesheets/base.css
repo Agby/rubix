@@ -8,21 +8,8 @@ body {
   padding: 0; }
 
 .App {
-  text-align: center; }
-
-.controls {
   display: flex;
-  justify-content: center; }
-
-.randomize {
-  cursor: pointer;
-  margin: 20px 10px;
-  transition: all 0.1s linear;
-  width: 100px; }
-  .randomize.is-active {
-    background: #7c8394;
-    color: #fff; }
-  .randomize:hover {
-    background: #7c8394; }
-  .randomize:focus {
-    outline: 0; }
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
+  height: 95vh; }
