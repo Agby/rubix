@@ -1,0 +1,67 @@
+.asix {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  height: 6px;
+  width: 1000px;
+  transform-style: preserve-3d; }
+
+.-x figure {
+  background: red;
+  border: 1px solid red; }
+
+.-x:after {
+  content: 'x-asix'; }
+
+.-y {
+  left: 100px;
+  transform: rotateZ(90deg); }
+  .-y figure {
+    background: blue;
+    border: 1px solid blue; }
+  .-y:after {
+    content: 'y-asix'; }
+
+.-z {
+  left: 100px;
+  transform: rotateY(90deg); }
+  .-z figure {
+    background: green;
+    border: 1px solid green; }
+  .-z:after {
+    content: 'z-asix'; }
+
+.asix figure {
+  margin: 0;
+  width: 1000px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box; }
+
+.asix .back {
+  transform: translateZ(-3px); }
+
+.asix .right {
+  width: 4px;
+  height: 4px;
+  transform: rotateY(-270deg) translateZ(1000px);
+  transform-origin: top right; }
+
+.asix .left {
+  width: 4px;
+  height: 4px;
+  transform: rotateY(270deg) translateX(-3px);
+  transform-origin: center left; }
+
+.asix .top {
+  transform: rotateX(-90deg) translateY(-3px);
+  transform-origin: top center; }
+
+.asix .bottom {
+  transform: rotateX(90deg) translateY(3px);
+  transform-origin: bottom center; }
+
+.asix .front {
+  transform: translateZ(3px); }

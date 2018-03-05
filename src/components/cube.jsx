@@ -1,13 +1,15 @@
 import React from 'react'
 
+const sideArray = ['front', 'back', 'right', 'left', 'top', 'bottom']
 const Cube = props => (
   <div className="cube" style={props.style}>
-    <figure className="front" />
-    <figure className="back" />
-    <figure className="right" />
-    <figure className="left" />
-    <figure className="top" />
-    <figure className="bottom" />
+    {sideArray.map(key => (
+      <figure
+        key={props.index + key}
+        className={key}
+        onClick={e => props.handleRubixRotate(e, props.index, key)}
+      />
+    ))}
   </div>
 )
 

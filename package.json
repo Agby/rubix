@@ -26,7 +26,8 @@
     "stylelint": "^9.1.1",
     "stylelint-config-sass-guidelines": "^4.1.0",
     "stylelint-order": "^0.8.1",
-    "stylelint-scss": "^2.4.0"
+    "stylelint-scss": "^2.4.0",
+    "underscore": "^1.8.3"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
@@ -41,7 +42,7 @@
     ]
   },
   "scripts": {
-    "check": "lint-staged && flow",
+    "precommit": "lint-staged && flow",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
