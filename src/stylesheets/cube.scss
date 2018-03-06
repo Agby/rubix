@@ -7,7 +7,6 @@
   width: 1200px;
   height: 800px;
 	transform-style: preserve-3d;
-	perspective-origin: center center;
 }
 
 .cube-contain {
@@ -26,7 +25,6 @@
   height: 100px;
 	width: 100px;
 	transform-style: preserve-3d;
-	perspective-origin: center center;
 	transition: all 0.2s ease-in-out;
 }
 

@@ -43,6 +43,10 @@ export default class CubeBox extends React.Component<Props, State> {
                     index={cubeIndex}
                     key={cubeIndex}
                     style={{
+                      'transform-origin': `
+                        ${50-offsetArray[indexX]}%
+                        ${50-offsetArray[indexY]}%
+                        ${-offsetArray[indexZ]}px`,
                       transform: `translate3d(${offsetArray[indexX]}px, ${
                         offsetArray[indexY]
                       }px, ${offsetArray[indexZ]}px)
@@ -50,10 +54,6 @@ export default class CubeBox extends React.Component<Props, State> {
                          rotateY(${this.props.rotateMap[cubeIndex].y}deg)
                          rotateZ(${this.props.rotateMap[cubeIndex].z}deg)
                         `,
-                      'transform-origin': `
-                        ${50-offsetArray[indexX]}%
-                        ${50-offsetArray[indexY]}%
-                        ${-offsetArray[indexZ]}px`,
                     }}
                     handleRubixRotate={this.props.handleRubixRotate}
                   />
