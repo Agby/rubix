@@ -14,3 +14,11 @@ const Cube = props => (
 )
 
 export default Cube
+
+/*
+
+        onContextMenu={e => {
+          props.handleRubixRotate(e, props.index, key) 
+          e.preventDefault()}
+        }
+        */

@@ -1,51 +1,27 @@
 const RotateCalc = {}
 
 RotateCalc.clockWiseRotate = ([
-  // from
-  a,
-  d,
-  g,
-  b,
-  e,
-  h,
-  c,
-  f,
-  i,
-]) => [
+	// from
+	 a, d, g,
+	 b, e, h,
+	 c, f, i,
+])  => ([
   // to
-  b,
-  a,
-  d,
-  c,
-  e,
-  g,
-  f,
-  i,
-  h,
-]
+   c, b, a,
+	 f, e, d,
+	 i, h, g,
+])
 
 RotateCalc.counterClockWiseRotate = ([
-  // from
-  a,
-  d,
-  g,
-  b,
-  e,
-  h,
-  c,
-  f,
-  i,
-]) => [
+	// from
+	 a, d, g,
+	 b, e, h,
+	 c, f, i,
+])  => ([
   // to
-  d,
-  g,
-  h,
-  a,
-  e,
-  i,
-  b,
-  c,
-  f,
-]
+   g, h, i,
+	 d, e, f,
+	 a, b, c,
+])
 
 export default RotateCalc

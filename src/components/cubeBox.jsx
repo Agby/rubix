@@ -7,7 +7,7 @@ import Asix from './asixs.jsx'
 type Props = {}
 type State = {}
 
-export default class CubeBox extends React.PureComponent<Props, State> {
+export default class CubeBox extends React.Component<Props, State> {
   constructor(props: Object) {
     super(props)
     this.state = {}
@@ -38,7 +38,6 @@ export default class CubeBox extends React.PureComponent<Props, State> {
             offsetArray.map((y, indexY) =>
               offsetArray.map((z, indexZ) => {
                 const cubeIndex = indexX * 9 + indexY * 3 + indexZ
-
                 return (
                   <Cube
                     index={cubeIndex}
@@ -52,8 +51,8 @@ export default class CubeBox extends React.PureComponent<Props, State> {
                          rotateZ(${this.props.rotateMap[cubeIndex].z}deg)
                         `,
                       'transform-origin': `
-                        ${50 - offsetArray[indexX]}%
-                        ${50 + offsetArray[indexY]}%
+                        ${50-offsetArray[indexX]}%
+                        ${50-offsetArray[indexY]}%
                         ${-offsetArray[indexZ]}px`,
                     }}
                     handleRubixRotate={this.props.handleRubixRotate}
